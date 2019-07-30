@@ -7,9 +7,7 @@ import (
 )
 
 func main() {
-	//cmd := parseCmd()
-	cmd := new(Cmd)
-	cmd.class = "java.lang.Object"
+	cmd := parseCmd()
 	if cmd.versionFlag {
 		fmt.Println("version 0.0.1")
 	}else if cmd.helpFlag || cmd.class == "" {
