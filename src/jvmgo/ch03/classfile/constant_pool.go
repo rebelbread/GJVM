@@ -22,8 +22,8 @@ func (self ConstantPool) getConstantInfo(index uint16) ConstantInfo {
 }
 func (self ConstantPool) getNameAndType(index uint16) (string, string) {
 	ntInfo := self.getConstantInfo(index).(*ConstantNameAndTypeInfo)
-	name := self.getUtf8(nt.nameIndex)
-	_type := self.getUtf8(nt.descriptorIndex)
+	name := self.getUtf8(ntInfo.nameIndex)
+	_type := self.getUtf8(ntInfo.descriptorIndex)
 	return name, _type
 
 }
